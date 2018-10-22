@@ -17,6 +17,7 @@ namespace AlphaStay
         OracleCommand cmd;
         OracleDataReader rdr;
         string query;
+        string s1;
 
         public Customer()
         {
@@ -36,7 +37,7 @@ namespace AlphaStay
                 int s;
                 s = Convert.ToInt16(ID) + 1;
                 textBox1.Text = Convert.ToString(s);
-                
+                s1=s.ToString();
             }
             con1.Close();
         }
@@ -50,18 +51,6 @@ namespace AlphaStay
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-
-
-
-
-
-
-
             int TEMP=0;
             textBox2.Focus();
             con1.Open();
@@ -79,7 +68,7 @@ namespace AlphaStay
             if (TEMP > 0)
             {
                 MessageBox.Show(" RECORD ADDED SUCESSFULLY");
-                Room r = new Room();
+                Room r = new Room(s1);
                 r.Show();
                 this.Hide();
             }
