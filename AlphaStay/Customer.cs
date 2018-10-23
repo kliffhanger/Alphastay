@@ -44,8 +44,8 @@ namespace AlphaStay
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AdminLogin adminLogin = new AdminLogin();
-            adminLogin.Show();
+            Home op = new Home();
+            op.Show();
             Hide();
         }
 
@@ -68,7 +68,7 @@ namespace AlphaStay
             if (TEMP > 0)
             {
                 MessageBox.Show(" RECORD ADDED SUCESSFULLY");
-                Room r = new Room(s1);
+                Room r = new Room();
                 r.Show();
                 this.Hide();
             }

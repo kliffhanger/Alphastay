@@ -12,10 +12,10 @@ namespace AlphaStay
 {
     public partial class Room : Form
     {
-        public Room(string s)
+        public Room( )
         {
             InitializeComponent();
-            s1=s;
+            
         }
         public string s1 { get; set; }
         private void label4_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace AlphaStay
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Reservation reserve = new Reservation(s1);
+            Reservation reserve = new Reservation();
             reserve.Show();
             this.Hide();
         }
@@ -53,6 +53,11 @@ namespace AlphaStay
             }
             textBox3.Text = p.ToString();
             textBox3.Enabled = false;
+        }
+
+        private void Room_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

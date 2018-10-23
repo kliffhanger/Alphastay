@@ -107,6 +107,7 @@
             this.Controls.Add(this.label2);
             this.Name = "Room";
             this.Text = "Room";
+            this.Load += new System.EventHandler(this.Room_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
