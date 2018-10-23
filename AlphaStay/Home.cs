@@ -33,7 +33,7 @@ namespace AlphaStay
             }
             if (radioButton3.Checked == true)
             {
-                Reservation op = new Reservation("NULL");
+                Reservation op = new Reservation();
                 op.Show();
                 Hide();
             }
@@ -54,6 +54,11 @@ namespace AlphaStay
             AdminLogin op = new AdminLogin();
             op.Show();
             Hide();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
