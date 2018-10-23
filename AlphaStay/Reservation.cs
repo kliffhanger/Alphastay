@@ -38,5 +38,10 @@ namespace AlphaStay
             room.Show();
             this.Hide();
         }
+
+        private void Reservation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

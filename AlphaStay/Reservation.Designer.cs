@@ -182,6 +182,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Reservation";
             this.Text = "Reservation";
+            this.Load += new System.EventHandler(this.Reservation_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

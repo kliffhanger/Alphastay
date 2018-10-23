@@ -71,7 +71,7 @@ namespace AlphaStay
                 }
                 else if (textBox2.Text == STR)
                 {
-                    Customer op = new Customer();
+                    Home op = new Home();
                     op.Show();
                     Hide();
                 }
