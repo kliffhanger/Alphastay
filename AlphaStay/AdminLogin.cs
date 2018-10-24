@@ -31,6 +31,7 @@ namespace AlphaStay
         public AdminLogin()
         {
             InitializeComponent();
+            textBox2.PasswordChar = '*';
             con1 = new OracleConnection("Data Source=localhost;User ID=alphastay;password=alphastay ");
         }
 
