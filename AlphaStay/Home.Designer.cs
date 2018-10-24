@@ -79,6 +79,7 @@
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Billing";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // button1
             // 

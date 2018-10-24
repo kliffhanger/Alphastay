@@ -60,5 +60,10 @@ namespace AlphaStay
         {
 
         }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
