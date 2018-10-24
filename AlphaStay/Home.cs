@@ -33,12 +33,6 @@ namespace AlphaStay
                 ser.Show();
                 Hide();
             }
-            if (radioButton3.Checked == true)
-            {
-              //  Reservation op = new Reservation();
-               // op.Show();
-               // Hide();
-            }
 
             if (radioButton4.Checked == true)
             {

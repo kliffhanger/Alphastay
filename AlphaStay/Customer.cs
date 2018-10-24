@@ -51,43 +51,12 @@ namespace AlphaStay
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int TEMP=0;
-            textBox2.Focus();
-            con1.Open();
-            query = "Insert into booking values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "')";
-            cmd = new OracleCommand(query, con1);
-            try
-            {
-                 TEMP = cmd.ExecuteNonQuery();
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Exception: {0}", ex.Message);
-            }
-
-            if (TEMP > 0)
-            {
-                string s2 = "new";
-                MessageBox.Show(" RECORD ADDED SUCESSFULLY");
-                Room r = new Room(s1,s2);
-                r.Show();
-                this.Hide();
-            }
-
-                
-            else
-                MessageBox.Show("INSERT OPERATION FAILED ");
-            con1.Close();
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
         }
-
-
-    
 
     private void textBox3_TextChanged(object sender, EventArgs e)
         {
@@ -106,6 +75,43 @@ namespace AlphaStay
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void add_button_Click(object sender, EventArgs e)
+        {
+            int TEMP = 0;
+            textBox2.Focus();
+            con1.Open();
+            query = "Insert into booking values('" + textBox1.Text + "','" + textBox2.Text + "','" + richTextBox1.Text + "','" + textBox4.Text + "','" + textBox5.Text + "')";
+            cmd = new OracleCommand(query, con1);
+            try
+            {
+                TEMP = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception: {0}", ex.Message);
+            }
+
+            if (TEMP > 0)
+            {
+                string s2 = "new";
+                MessageBox.Show(" RECORD ADDED SUCESSFULLY");
+                Room r = new Room(s1, s2);
+                r.Show();
+                this.Hide();
+            }
+
+
+            else
+                MessageBox.Show("INSERT OPERATION FAILED ");
+            con1.Close();
 
         }
     }
