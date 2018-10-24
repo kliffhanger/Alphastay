@@ -29,13 +29,15 @@ namespace AlphaStay
 
             if (radioButton2.Checked == true)
             {
-                
+                search_customer ser = new search_customer();
+                ser.Show();
+                Hide();
             }
             if (radioButton3.Checked == true)
             {
-                Reservation op = new Reservation();
-                op.Show();
-                Hide();
+              //  Reservation op = new Reservation();
+               // op.Show();
+               // Hide();
             }
 
             if (radioButton4.Checked == true)

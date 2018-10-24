@@ -12,12 +12,14 @@ namespace AlphaStay
 {
     public partial class Room : Form
     {
-        public Room( )
+        public Room(string cust_id,string entrypoint)
         {
             InitializeComponent();
-            
+            s1 = cust_id;
+            s2 = entrypoint;
         }
         public string s1 { get; set; }
+        public string s2 { get; set; }
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -25,14 +27,23 @@ namespace AlphaStay
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Customer customer = new Customer();
-            customer.Show();
-            Hide();
+            if (s2 == "")
+            {
+                search_customer try_again = new search_customer();
+                try_again.Show();
+                Hide();
+            }
+            else
+            {
+                Customer customer = new Customer();
+                customer.Show();
+                Hide();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Reservation reserve = new Reservation();
+            Reservation reserve = new Reservation(s1,s2);
             reserve.Show();
             this.Hide();
         }

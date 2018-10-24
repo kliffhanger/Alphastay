@@ -67,8 +67,9 @@ namespace AlphaStay
 
             if (TEMP > 0)
             {
+                string s2 = "new";
                 MessageBox.Show(" RECORD ADDED SUCESSFULLY");
-                Room r = new Room();
+                Room r = new Room(s1,s2);
                 r.Show();
                 this.Hide();
             }
